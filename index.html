@@ -1,1874 +1,672 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- =====================================================
-       SIRIA — Premium Business Website Template
-       Replace all YOUR_* placeholders before production use.
-  ====================================================== -->
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Siria | Digital Business Solutions</title>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+    content="Siria is a modern digital agency helping businesses grow through branding, web design and digital solutions.">
 
-  <title>SIRIA | Digital Solutions for Modern Businesses</title>
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <meta name="description"
-    content="SIRIA is a premium digital business website template for agencies, startups, service providers and modern businesses.">
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-  <meta name="keywords"
-    content="business website, digital agency, web design, business solutions, startup website">
+<!-- Main CSS -->
+<link rel="stylesheet" href="style.css">
 
-  <meta name="author" content="YOUR_NAME">
+</head><body><!-- NAVIGATION -->
+<header class="navbar">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="SIRIA | Digital Solutions">
-  <meta property="og:description"
-    content="Premium digital solutions for ambitious businesses.">
-  <meta property="og:type" content="website">
-
-  <style>
-
-    /* =====================================================
-       RESET
-    ====================================================== */
-
-    *,
-    *::before,
-    *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      font-family:
-        Inter,
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      background: #061426;
-      color: #f7faff;
-
-      overflow-x: hidden;
-      line-height: 1.6;
-
-      transition:
-        background 0.3s ease,
-        color 0.3s ease;
-    }
-
-    body.light {
-      background: #f5f9ff;
-      color: #071426;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    button,
-    input,
-    textarea {
-      font: inherit;
-    }
-
-
-    /* =====================================================
-       VARIABLES
-    ====================================================== */
-
-    :root {
-
-      --primary: #1479ff;
-      --primary-dark: #0756d8;
-      --primary-light: #5aafff;
-
-      --dark: #061426;
-      --dark-2: #0a1d36;
-      --dark-3: #102846;
-
-      --white: #ffffff;
-
-      --text: #f5f9ff;
-      --muted: #9db2cc;
-
-      --card:
-        rgba(15, 38, 68, 0.75);
-
-      --border:
-        rgba(255, 255, 255, 0.1);
-
-      --shadow:
-        0 25px 70px
-        rgba(0, 0, 0, 0.3);
-    }
-
-    body.light {
-
-      --dark: #f5f9ff;
-      --dark-2: #ffffff;
-      --dark-3: #eaf2ff;
-
-      --text: #071426;
-      --muted: #5c6f86;
-
-      --card:
-        rgba(255, 255, 255, 0.85);
-
-      --border:
-        rgba(0, 0, 0, 0.1);
-
-      --shadow:
-        0 25px 70px
-        rgba(0, 50, 100, 0.12);
-    }
-
-
-    /* =====================================================
-       REUSABLE
-    ====================================================== */
-
-    .container {
-      width: min(1140px, 90%);
-      margin: auto;
-    }
-
-    .section {
-      padding: 110px 0;
-    }
-
-    .section-tag {
-
-      display: inline-block;
-
-      padding: 7px 13px;
-
-      border-radius: 50px;
-
-      background:
-        rgba(20, 121, 255, 0.1);
-
-      border:
-        1px solid
-        rgba(82, 165, 255, 0.2);
-
-      color:
-        var(--primary-light);
-
-      font-size: 0.78rem;
-
-      font-weight: 800;
-
-      letter-spacing: 1.5px;
-
-      text-transform: uppercase;
-
-      margin-bottom: 18px;
-    }
-
-    .section-title {
-
-      font-size:
-        clamp(2.2rem, 5vw, 3.7rem);
-
-      line-height: 1.1;
-
-      letter-spacing: -1.5px;
-
-      max-width: 760px;
-
-      margin-bottom: 20px;
-    }
-
-    .section-text {
-
-      color:
-        var(--muted);
-
-      font-size: 1.05rem;
-
-      max-width: 650px;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    .center .section-title,
-    .center .section-text {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-
-    /* =====================================================
-       BUTTONS
-    ====================================================== */
-
-    .btn {
-
-      display:
-        inline-flex;
-
-      align-items: center;
-      justify-content: center;
-
-      gap: 8px;
-
-      padding:
-        14px 24px;
-
-      border-radius:
-        9px;
-
-      font-weight:
-        700;
-
-      cursor:
-        pointer;
-
-      border:
-        none;
-
-      transition:
-        0.3s ease;
-    }
-
-    .btn-primary {
-
-      color:
-        white;
-
-      background:
-        linear-gradient(
-          135deg,
-          #1479ff,
-          #3b9fff
-        );
-
-      box-shadow:
-        0 12px 35px
-        rgba(20, 121, 255, 0.35);
-    }
-
-    .btn-primary:hover {
-
-      transform:
-        translateY(-3px);
-
-      box-shadow:
-        0 18px 45px
-        rgba(20, 121, 255, 0.5);
-    }
-
-    .btn-secondary {
-
-      color:
-        var(--text);
-
-      background:
-        transparent;
-
-      border:
-        1px solid
-        var(--border);
-    }
-
-    .btn-secondary:hover {
-
-      background:
-        rgba(20, 121, 255, 0.08);
-
-      transform:
-        translateY(-3px);
-    }
-
-
-    /* =====================================================
-       LOADER
-    ====================================================== */
-
-    #loader {
-
-      position:
-        fixed;
-
-      inset:
-        0;
-
-      background:
-        #061426;
-
-      z-index:
-        99999;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      transition:
-        opacity 0.6s ease,
-        visibility 0.6s ease;
-    }
-
-    #loader.hide {
-
-      opacity:
-        0;
-
-      visibility:
-        hidden;
-    }
-
-    .loader-content {
-
-      text-align:
-        center;
-    }
-
-    .loader-logo {
-
-      font-size:
-        2.3rem;
-
-      font-weight:
-        900;
-
-      letter-spacing:
-        4px;
-
-      margin-bottom:
-        20px;
-    }
-
-    .loader-logo span {
-      color: var(--primary);
-    }
-
-    .loader-bar {
-
-      width:
-        180px;
-
-      height:
-        4px;
-
-      background:
-        rgba(255,255,255,0.1);
-
-      border-radius:
-        20px;
-
-      overflow:
-        hidden;
-    }
-
-    .loader-progress {
-
-      width:
-        0;
-
-      height:
-        100%;
-
-      background:
-        var(--primary);
-
-      animation:
-        loading 1.5s ease forwards;
-    }
-
-    @keyframes loading {
-
-      to {
-        width: 100%;
-      }
-
-    }
-
-
-    /* =====================================================
-       HEADER
-    ====================================================== */
-
-    header {
-
-      position:
-        fixed;
-
-      top:
-        0;
-
-      left:
-        0;
-
-      width:
-        100%;
-
-      z-index:
-        1000;
-
-      transition:
-        0.3s ease;
-    }
-
-    header.scrolled {
-
-      background:
-        rgba(6, 20, 38, 0.88);
-
-      backdrop-filter:
-        blur(18px);
-
-      border-bottom:
-        1px solid
-        var(--border);
-    }
-
-    body.light header.scrolled {
-
-      background:
-        rgba(255,255,255,0.9);
-    }
-
-    nav {
-
-      height:
-        78px;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        space-between;
-    }
-
-    .logo {
-
-      font-size:
-        1.65rem;
-
-      font-weight:
-        900;
-
-      letter-spacing:
-        2px;
-    }
-
-    .logo span {
-      color:
-        var(--primary);
-    }
-
-    .nav-links {
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      gap:
-        28px;
-    }
-
-    .nav-links a {
-
-      color:
-        var(--muted);
-
-      font-size:
-        0.93rem;
-
-      font-weight:
-        600;
-
-      transition:
-        0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color:
-        var(--text);
-    }
-
-    .nav-actions {
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      gap:
-        12px;
-    }
-
-    .theme-btn {
-
-      width:
-        42px;
-
-      height:
-        42px;
-
-      border-radius:
-        50%;
-
-      border:
-        1px solid
-        var(--border);
-
-      background:
-        transparent;
-
-      color:
-        var(--text);
-
-      cursor:
-        pointer;
-
-      font-size:
-        1rem;
-    }
-
-    .menu-btn {
-
-      display:
-        none;
-
-      font-size:
-        1.7rem;
-
-      cursor:
-        pointer;
-
-      background:
-        transparent;
-
-      color:
-        var(--text);
-
-      border:
-        none;
-    }
-
-
-    /* =====================================================
-       HERO
-    ====================================================== */
-
-    .hero {
-
-      min-height:
-        100vh;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      padding:
-        120px 0 80px;
-
-      position:
-        relative;
-
-      background:
-
-        radial-gradient(
-          circle at 15% 15%,
-          rgba(20,121,255,0.18),
-          transparent 30%
-        ),
-
-        radial-gradient(
-          circle at 85% 30%,
-          rgba(20,121,255,0.15),
-          transparent 28%
-        );
-    }
-
-    .hero::before {
-
-      content:
-        "";
-
-      position:
-        absolute;
-
-      width:
-        450px;
-
-      height:
-        450px;
-
-      background:
-        rgba(20,121,255,0.12);
-
-      filter:
-        blur(100px);
-
-      border-radius:
-        50%;
-
-      top:
-        10%;
-
-      right:
-        -150px;
-    }
-
-    .hero-grid {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        1.05fr 0.95fr;
-
-      gap:
-        70px;
-
-      align-items:
-        center;
-    }
-
-    .hero-badge {
-
-      display:
-        inline-flex;
-
-      align-items:
-        center;
-
-      gap:
-        9px;
-
-      padding:
-        8px 15px;
-
-      border-radius:
-        50px;
-
-      background:
-        rgba(20,121,255,0.08);
-
-      border:
-        1px solid
-        rgba(82,165,255,0.2);
-
-      color:
-        var(--primary-light);
-
-      font-size:
-        0.85rem;
-
-      margin-bottom:
-        25px;
-    }
-
-    .pulse-dot {
-
-      width:
-        8px;
-
-      height:
-        8px;
-
-      background:
-        #42f5a7;
-
-      border-radius:
-        50%;
-
-      box-shadow:
-        0 0 15px
-        #42f5a7;
-
-      animation:
-        pulse 1.5s infinite;
-    }
-
-    @keyframes pulse {
-
-      50% {
-        transform:
-          scale(1.6);
-
-        opacity:
-          0.5;
-      }
-
-    }
-
-    .hero h1 {
-
-      font-size:
-        clamp(3.3rem, 7vw, 6.2rem);
-
-      line-height:
-        0.96;
-
-      letter-spacing:
-        -3px;
-
-      margin-bottom:
-        26px;
-    }
-
-    .gradient-text {
-
-      background:
-        linear-gradient(
-          90deg,
-          var(--text),
-          var(--primary-light)
-        );
-
-      -webkit-background-clip:
-        text;
-
-      background-clip:
-        text;
-
-      color:
-        transparent;
-    }
-
-    .hero p {
-
-      color:
-        var(--muted);
-
-      font-size:
-        1.08rem;
-
-      max-width:
-        570px;
-
-      margin-bottom:
-        35px;
-    }
-
-    .hero-buttons {
-
-      display:
-        flex;
-
-      gap:
-        14px;
-
-      flex-wrap:
-        wrap;
-    }
-
-
-    /* =====================================================
-       HERO VISUAL
-    ====================================================== */
-
-    .hero-visual {
-
-      position:
-        relative;
-
-      min-height:
-        520px;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-    }
-
-    .hero-glow {
-
-      position:
-        absolute;
-
-      width:
-        380px;
-
-      height:
-        380px;
-
-      border-radius:
-        50%;
-
-      background:
-        rgba(20,121,255,0.2);
-
-      filter:
-        blur(80px);
-    }
-
-    .dashboard {
-
-      width:
-        min(100%, 470px);
-
-      padding:
-        25px;
-
-      border-radius:
-        25px;
-
-      position:
-        relative;
-
-      background:
-
-        linear-gradient(
-          145deg,
-          rgba(20,53,92,0.9),
-          rgba(7,24,46,0.92)
-        );
-
-      border:
-        1px solid
-        rgba(255,255,255,0.12);
-
-      box-shadow:
-        var(--shadow);
-
-      backdrop-filter:
-        blur(15px);
-    }
-
-    body.light .dashboard {
-
-      background:
-        linear-gradient(
-          145deg,
-          #ffffff,
-          #eaf3ff
-        );
-    }
-
-    .dashboard-top {
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        space-between;
-
-      margin-bottom:
-        25px;
-    }
-
-    .mini-brand {
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      gap:
-        10px;
-    }
-
-    .mini-logo {
-
-      width:
-        45px;
-
-      height:
-        45px;
-
-      display:
-        grid;
-
-      place-items:
-        center;
-
-      border-radius:
-        13px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #1479ff,
-          #5aafff
-        );
-
-      font-weight:
-        900;
-    }
-
-    .mini-brand small {
-
-      color:
-        var(--muted);
-    }
-
-    .status {
-
-      padding:
-        7px 12px;
-
-      border-radius:
-        50px;
-
-      background:
-        rgba(66,245,167,0.1);
-
-      color:
-        #42f5a7;
-
-      font-size:
-        0.78rem;
-    }
-
-    .chart-card {
-
-      padding:
-        23px;
-
-      border-radius:
-        18px;
-
-      background:
-        rgba(255,255,255,0.05);
-
-      border:
-        1px solid
-        var(--border);
-    }
-
-    .chart-card small {
-
-      color:
-        var(--muted);
-    }
-
-    .chart-number {
-
-      font-size:
-        2.2rem;
-
-      font-weight:
-        900;
-
-      margin:
-        7px 0 20px;
-    }
-
-    .bars {
-
-      height:
-        140px;
-
-      display:
-        flex;
-
-      align-items:
-        flex-end;
-
-      gap:
-        10px;
-    }
-
-    .bar {
-
-      flex:
-        1;
-
-      border-radius:
-        6px 6px 0 0;
-
-      background:
-        linear-gradient(
-          to top,
-          #1479ff,
-          #67b8ff
-        );
-
-      animation:
-        bars 1.5s ease;
-    }
-
-    .bar:nth-child(1) {
-      height: 42%;
-    }
-
-    .bar:nth-child(2) {
-      height: 58%;
-    }
-
-    .bar:nth-child(3) {
-      height: 46%;
-    }
-
-    .bar:nth-child(4) {
-      height: 80%;
-    }
-
-    .bar:nth-child(5) {
-      height: 67%;
-    }
-
-    .bar:nth-child(6) {
-      height: 98%;
-    }
-
-    @keyframes bars {
-
-      from {
-        height:
-          0;
-      }
-
-    }
-
-    .floating-card {
-
-      position:
-        absolute;
-
-      padding:
-        15px 18px;
-
-      border-radius:
-        15px;
-
-      background:
-        rgba(9,29,54,0.9);
-
-      border:
-        1px solid
-        var(--border);
-
-      backdrop-filter:
-        blur(15px);
-
-      box-shadow:
-        0 15px 40px
-        rgba(0,0,0,0.25);
-    }
-
-    body.light .floating-card {
-      background:
-        rgba(255,255,255,0.9);
-    }
-
-    .floating-card small {
-
-      color:
-        var(--muted);
-    }
-
-    .floating-card strong {
-
-      display:
-        block;
-
-      margin-top:
-        4px;
-
-      font-size:
-        1.2rem;
-    }
-
-    .float-1 {
-
-      top:
-        35px;
-
-      left:
-        -20px;
-    }
-
-    .float-2 {
-
-      bottom:
-        40px;
-
-      right:
-        -20px;
-    }
-
-
-    /* =====================================================
-       STATS
-    ====================================================== */
-
-    .stats {
-
-      padding:
-        45px 0;
-
-      border-top:
-        1px solid
-        var(--border);
-
-      border-bottom:
-        1px solid
-        var(--border);
-    }
-
-    .stats-grid {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(4,1fr);
-
-      gap:
-        25px;
-    }
-
-    .stat-item {
-
-      text-align:
-        center;
-    }
-
-    .stat-number {
-
-      display:
-        block;
-
-      font-size:
-        2rem;
-
-      font-weight:
-        900;
-
-      margin-bottom:
-        5px;
-    }
-
-    .stat-label {
-
-      color:
-        var(--muted);
-
-      font-size:
-        0.85rem;
-    }
-
-
-    /* =====================================================
-       SERVICES
-    ====================================================== */
-
-    .services-grid {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(4,1fr);
-
-      gap:
-        20px;
-
-      margin-top:
-        55px;
-    }
-
-    .service-card {
-
-      padding:
-        30px;
-
-      background:
-        var(--card);
-
-      border:
-        1px solid
-        var(--border);
-
-      border-radius:
-        20px;
-
-      transition:
-        0.35s ease;
-    }
-
-    .service-card:hover {
-
-      transform:
-        translateY(-9px);
-
-      border-color:
-        rgba(82,165,255,0.4);
-
-      box-shadow:
-        var(--shadow);
-    }
-
-    .service-icon {
-
-      width:
-        58px;
-
-      height:
-        58px;
-
-      display:
-        grid;
-
-      place-items:
-        center;
-
-      font-size:
-        1.4rem;
-
-      border-radius:
-        16px;
-
-      margin-bottom:
-        22px;
-
-      background:
-        rgba(20,121,255,0.12);
-
-      color:
-        var(--primary-light);
-    }
-
-    .service-card h3 {
-
-      font-size:
-        1.2rem;
-
-      margin-bottom:
-        12px;
-    }
-
-    .service-card p {
-
-      color:
-        var(--muted);
-
-      font-size:
-        0.92rem;
-    }
-
-
-    /* =====================================================
-       ABOUT
-    ====================================================== */
-
-    .about-grid {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        1fr 1fr;
-
-      gap:
-        80px;
-
-      align-items:
-        center;
-    }
-
-    .about-features {
-
-      padding:
-        38px;
-
-      border-radius:
-        24px;
-
-      background:
-
-        linear-gradient(
-          145deg,
-          rgba(20,121,255,0.15),
-          var(--card)
-        );
-
-      border:
-        1px solid
-        var(--border);
-    }
-
-    .feature {
-
-      display:
-        flex;
-
-      gap:
-        16px;
-
-      padding:
-        20px 0;
-
-      border-bottom:
-        1px solid
-        var(--border);
-    }
-
-    .feature:last-child {
-      border-bottom:
-        none;
-    }
-
-    .check {
-
-      width:
-        34px;
-
-      min-width:
-        34px;
-
-      height:
-        34px;
-
-      display:
-        grid;
-
-      place-items:
-        center;
-
-      border-radius:
-        50%;
-
-      background:
-        rgba(20,121,255,0.15);
-
-      color:
-        var(--primary-light);
-
-      font-weight:
-        900;
-    }
-
-    .feature h4 {
-
-      margin-bottom:
-        5px;
-    }
-
-    .feature p {
-
-      color:
-        var(--muted);
-
-      font-size:
-        0.9rem;
-    }
-
-
-    /* =====================================================
-       PORTFOLIO
-    ====================================================== */
-
-    .portfolio-section {
-
-      background:
-        rgba(255,255,255,0.02);
-    }
-
-    .portfolio-filters {
-
-      display:
-        flex;
-
-      justify-content:
-        center;
-
-      gap:
-        10px;
-
-      flex-wrap:
-        wrap;
-
-      margin:
-        40px 0;
-    }
-
-    .filter-btn {
-
-      padding:
-        9px 16px;
-
-      border-radius:
-        50px;
-
-      border:
-        1px solid
-        var(--border);
-
-      background:
-        transparent;
-
-      color:
-        var(--muted);
-
-      cursor:
-        pointer;
-    }
-
-    .filter-btn.active {
-
-      background:
-        var(--primary);
-
-      color:
-        white;
-
-      border-color:
-        var(--primary);
-    }
-
-    .portfolio-grid {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(3,1fr);
-
-      gap:
-        22px;
-    }
-
-    .portfolio-card {
-
-      overflow:
-        hidden;
-
-      border-radius:
-        20px;
-
-      border:
-        1px solid
-        var(--border);
-
-      background:
-        var(--card);
-
-      transition:
-        0.3s ease;
-    }
-
-    .portfolio-card:hover {
-
-      transform:
-        translateY(-7px);
-
-      box-shadow:
-        var(--shadow);
-    }
-
-    .portfolio-image {
-
-      height:
-        230px;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      font-size:
-        4rem;
-
-      background:
-
-        linear-gradient(
-          135deg,
-          rgba(20,121,255,0.45),
-          rgba(10,29,54,0.8)
-        );
-    }
-
-    .portfolio-info {
-
-      padding:
-        23px;
-    }
-
-    .portfolio-info p {
-
-      color:
-  
-<!-- ABOUT SECTION --><section id="about" class="about">
-    <div class="section-container">
-        <div class="section-heading">
-            <span class="section-tag">ABOUT SIRIA</span>
-            <h2>Building Brands That Stand Out</h2>
-            <p>
-                Siria is a modern creative business focused on helping brands
-                build a strong and professional online presence.
-            </p>
-        </div>    <div class="about-content">
-        <div class="about-text">
-            <h3>Creative. Strategic. Professional.</h3>
-            <p>
-                We combine modern design, digital strategy, and creative
-                thinking to help businesses grow and connect with their
-                audience.
-            </p>
-
-            <p>
-                From branding and website design to digital solutions,
-                our goal is simple: create work that looks professional
-                and delivers real value.
-            </p>
-
-            <a href="#contact" class="btn btn-primary">Work With Us</a>
-        </div>
-
-        <div class="about-card">
-            <div class="about-stat">
-                <h3>100%</h3>
-                <p>Modern Design</p>
-            </div>
-
-            <div class="about-stat">
-                <h3>24/7</h3>
-                <p>Digital Presence</p>
-            </div>
-
-            <div class="about-stat">
-                <h3>∞</h3>
-                <p>Creative Ideas</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-</section><!-- PROCESS SECTION --><section class="process">
-    <div class="section-container">
-        <div class="section-heading">
-            <span class="section-tag">HOW WE WORK</span>
-            <h2>Simple Process. Powerful Results.</h2>
-        </div>    <div class="process-grid">
-
-        <div class="process-card">
-            <div class="process-number">01</div>
-            <h3>Discover</h3>
-            <p>
-                We understand your business, goals, audience,
-                and vision.
-            </p>
-        </div>
-
-        <div class="process-card">
-            <div class="process-number">02</div>
-            <h3>Design</h3>
-            <p>
-                We create a modern strategy and design that
-                represents your brand.
-            </p>
-        </div>
-
-        <div class="process-card">
-            <div class="process-number">03</div>
-            <h3>Develop</h3>
-            <p>
-                We turn ideas into professional digital
-                experiences.
-            </p>
-        </div>
-
-        <div class="process-card">
-            <div class="process-number">04</div>
-            <h3>Launch</h3>
-            <p>
-                Your business is ready to make an impact
-                online.
-            </p>
-        </div>
-
-    </div>
-</div>
-
-</section><!-- TESTIMONIALS SECTION --><section class="testimonials">
-    <div class="section-container">
-        <div class="section-heading">
-            <span class="section-tag">TESTIMONIALS</span>
-            <h2>What Clients Say</h2>
-            <p>
-                Built for businesses that want to look professional
-                and grow with confidence.
-            </p>
-        </div>    <div class="testimonial-grid">
-
-        <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p>
-                "Professional, creative, and easy to work with.
-                The final result exceeded our expectations."
-            </p>
-
-            <div class="client">
-                <div class="client-avatar">A</div>
-                <div>
-                    <h4>Alex Morgan</h4>
-                    <span>Business Owner</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p>
-                "The design gave our brand a completely new
-                and professional identity."
-            </p>
-
-            <div class="client">
-                <div class="client-avatar">S</div>
-                <div>
-                    <h4>Sarah Wilson</h4>
-                    <span>Startup Founder</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p>
-                "A modern digital experience that helped our
-                business stand out from competitors."
-            </p>
-
-            <div class="client">
-                <div class="client-avatar">J</div>
-                <div>
-                    <h4>James Carter</h4>
-                    <span>Entrepreneur</span>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-</section><!-- CTA SECTION --><section class="cta">
-    <div class="cta-container">
-        <span class="section-tag">LET'S CREATE</span>    <h2>Ready to Build Something Amazing?</h2>
-
-    <p>
-        Let's transform your ideas into a powerful digital experience.
-    </p>
-
-    <a href="#contact" class="btn btn-light">
-        Start Your Project
+    <a href="#home" class="logo">
+        SIRIA<span>.</span>
     </a>
-</div>
 
-</section><!-- CONTACT SECTION --><section id="contact" class="contact">
-    <div class="section-container">    <div class="section-heading">
-        <span class="section-tag">CONTACT US</span>
-        <h2>Let's Start a Conversation</h2>
+    <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-        <p>
-            Have an idea or project? We'd love to hear from you.
-        </p>
-    </div>
+    <a href="#contact" class="nav-button">
+        Let's Talk
+    </a>
 
-    <div class="contact-content">
+</header>
 
-        <div class="contact-info">
-            <h3>Get In Touch</h3>
+
+<!-- HERO SECTION -->
+<main>
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                ✦ DIGITAL BUSINESS SOLUTIONS
+            </div>
+
+            <h1>
+                We Build Brands That
+                <span>Move Forward.</span>
+            </h1>
 
             <p>
-                Tell us about your project and let's explore
-                how we can work together.
+                Siria helps ambitious businesses create powerful digital
+                experiences through modern design, branding, websites,
+                and strategic solutions.
             </p>
 
-            <div class="contact-item">
-                <span>📧</span>
-                <div>
-                    <h4>Email</h4>
-                    <p>hello@siria.com</p>
-                </div>
+            <div class="hero-buttons">
+
+                <a href="#contact" class="btn btn-primary">
+                    Start a Project →
+                </a>
+
+                <a href="#portfolio" class="btn btn-outline">
+                    View Our Work
+                </a>
+
             </div>
 
-            <div class="contact-item">
-                <span>📱</span>
-                <div>
-                    <h4>Phone</h4>
-                    <p>+00 000 000 000</p>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <span>📍</span>
-                <div>
-                    <h4>Location</h4>
-                    <p>Available Worldwide</p>
-                </div>
-            </div>
         </div>
 
 
-        <form class="contact-form">
+        <div class="hero-visual">
 
-            <div class="form-row">
+            <div class="glow glow-one"></div>
+            <div class="glow glow-two"></div>
 
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        placeholder="Enter your name"
-                        required
-                    >
+            <div class="hero-card">
+
+                <div class="card-top">
+                    <span class="status-dot"></span>
+                    <span>Digital Growth</span>
                 </div>
 
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Enter your email"
-                        required
-                    >
+                <div class="chart">
+                    <div class="chart-bar bar-one"></div>
+                    <div class="chart-bar bar-two"></div>
+                    <div class="chart-bar bar-three"></div>
+                    <div class="chart-bar bar-four"></div>
+                    <div class="chart-bar bar-five"></div>
+                </div>
+
+                <div class="card-bottom">
+
+                    <div>
+                        <small>Growth Rate</small>
+                        <h3>+128%</h3>
+                    </div>
+
+                    <div class="growth-icon">
+                        ↗
+                    </div>
+
                 </div>
 
             </div>
 
-
-            <div class="form-group">
-                <label for="service">Service</label>
-
-                <select id="service">
-                    <option value="">Select a service</option>
-                    <option>Brand Strategy</option>
-                    <option>Website Design</option>
-                    <option>Digital Marketing</option>
-                    <option>Creative Design</option>
-                    <option>Business Consulting</option>
-                </select>
-            </div>
-
-
-            <div class="form-group">
-                <label for="message">Your Message</label>
-
-                <textarea
-                    id="message"
-                    rows="6"
-                    placeholder="Tell us about your project..."
-                    required
-                ></textarea>
-            </div>
-
-
-            <button type="submit" class="btn btn-primary">
-                Send Message →
-            </button>
-
-        </form>
-
-    </div>
-
-</div>
-
-</section><!-- FOOTER --><footer class="footer"><div class="footer-container">
-
-    <div class="footer-brand">
-
-        <a href="#" class="footer-logo">
-            SIRIA<span>.</span>
-        </a>
-
-        <p>
-            Creating modern digital experiences for ambitious
-            businesses and brands.
-        </p>
-
-        <div class="social-links">
-            <a href="#" aria-label="Facebook">f</a>
-            <a href="#" aria-label="Instagram">◎</a>
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="Twitter">𝕏</a>
         </div>
 
-    </div>
+    </section>
 
 
-    <div class="footer-links">
+    <!-- TRUSTED SECTION -->
+    <section class="trusted">
+
+        <p>DESIGNED FOR THE FUTURE OF BUSINESS</p>
+
+        <div class="trusted-items">
+            <span>BRANDING</span>
+            <span>WEB DESIGN</span>
+            <span>STRATEGY</span>
+            <span>DIGITAL</span>
+            <span>CREATIVE</span>
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services">
+
+        <div class="section-header">
+
+            <div>
+                <span class="section-tag">
+                    WHAT WE DO
+                </span>
+
+                <h2>
+                    Digital Solutions Built
+                    <br>
+                    For Growth.
+                </h2>
+            </div>
+
+            <p>
+                We combine strategy, creativity, and technology
+                to help businesses build stronger brands and
+                better digital experiences.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+            <article class="service-card">
+
+                <div class="service-icon">✦</div>
+
+                <h3>Brand Strategy</h3>
+
+                <p>
+                    Build a memorable identity and create a
+                    clear direction for your business.
+                </p>
+
+                <a href="#contact">
+                    Learn More →
+                </a>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-icon">◈</div>
+
+                <h3>Website Design</h3>
+
+                <p>
+                    Modern, responsive, and professional websites
+                    designed to make your business stand out.
+                </p>
+
+                <a href="#contact">
+                    Learn More →
+                </a>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-icon">↗</div>
+
+                <h3>Digital Growth</h3>
+
+                <p>
+                    Smart digital strategies that help businesses
+                    reach more people and grow online.
+                </p>
+
+                <a href="#contact">
+                    Learn More →
+                </a>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-icon">◉</div>
+
+                <h3>Creative Design</h3>
+
+                <p>
+                    Professional visuals and creative assets that
+                    give your brand a strong visual identity.
+                </p>
+
+                <a href="#contact">
+                    Learn More →
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="portfolio">
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-tag">
+                    SELECTED WORK
+                </span>
+
+                <h2>
+                    Ideas Turned Into
+                    <br>
+                    Experiences.
+                </h2>
+
+            </div>
+
+            <a href="#contact" class="text-link">
+                Start Your Project →
+            </a>
+
+        </div>
+
+
+        <div class="portfolio-grid">
+
+            <div class="portfolio-card portfolio-large">
+
+                <div class="portfolio-image project-one">
+                    <span>BRAND IDENTITY</span>
+                </div>
+
+                <div class="portfolio-info">
+                    <div>
+                        <h3>Nova Studio</h3>
+                        <p>Brand Strategy & Digital Design</p>
+                    </div>
+
+                    <span class="arrow">↗</span>
+                </div>
+
+            </div>
+
+
+            <div class="portfolio-card">
+
+                <div class="portfolio-image project-two">
+                    <span>WEB EXPERIENCE</span>
+                </div>
+
+                <div class="portfolio-info">
+                    <div>
+                        <h3>Vertex</h3>
+                        <p>Website Design & Development</p>
+                    </div>
+
+                    <span class="arrow">↗</span>
+                </div>
+
+            </div>
+
+
+            <div class="portfolio-card">
+
+                <div class="portfolio-image project-three">
+                    <span>DIGITAL PRODUCT</span>
+                </div>
+
+                <div class="portfolio-info">
+                    <div>
+                        <h3>Flow Agency</h3>
+                        <p>Creative Digital Experience</p>
+                    </div>
+
+                    <span class="arrow">↗</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+
+        <div class="about-content">
+
+            <div class="about-left">
+
+                <span class="section-tag">
+                    ABOUT SIRIA
+                </span>
+
+                <h2>
+                    Built For Businesses
+                    That Think Bigger.
+                </h2>
+
+                <p>
+                    Siria is a modern digital business focused on
+                    helping brands create meaningful, professional,
+                    and powerful online experiences.
+                </p>
+
+                <p>
+                    We believe great design is more than looking good.
+                    It should communicate clearly, build trust, and
+                    help businesses move forward.
+                </p>
+
+                <a href="#contact" class="btn btn-primary">
+                    Work With Us →
+                </a>
+
+            </div>
+
+
+            <div class="about-right">
+
+                <div class="about-stat-card">
+
+                    <h3>100%</h3>
+                    <p>Focused on modern digital experiences.</p>
+
+                </div>
+
+                <div class="about-stat-card">
+
+                    <h3>∞</h3>
+                    <p>Creative possibilities for every business.</p>
+
+                </div>
+
+                <div class="about-stat-card">
+
+                    <h3>24/7</h3>
+                    <p>A brand designed to work around the world.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROCESS SECTION -->
+    <section class="process">
+
+        <div class="section-header center">
+
+            <span class="section-tag">
+                HOW WE WORK
+            </span>
+
+            <h2>
+                Simple Process.
+                Powerful Results.
+            </h2>
+
+        </div>
+
+
+        <div class="process-grid">
+
+            <div class="process-card">
+
+                <span class="process-number">01</span>
+
+                <h3>Discover</h3>
+
+                <p>
+                    We learn about your business, goals,
+                    audience, and vision.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span class="process-number">02</span>
+
+                <h3>Design</h3>
+
+                <p>
+                    We transform ideas into a clear
+                    creative direction.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span class="process-number">03</span>
+
+                <h3>Build</h3>
+
+                <p>
+                    We create a polished digital
+                    experience for your brand.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span class="process-number">04</span>
+
+                <h3>Launch</h3>
+
+                <p>
+                    Your project is ready to make
+                    an impact.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+
+        <div class="contact-wrapper">
+
+            <div class="contact-text">
+
+                <span class="section-tag">
+                    LET'S TALK
+                </span>
+
+                <h2>
+                    Have An Idea?
+                    Let's Build It.
+                </h2>
+
+                <p>
+                    Tell us about your project and let's explore
+                    how we can create something meaningful together.
+                </p>
+
+                <div class="contact-details">
+
+                    <p>
+                        <strong>Email</strong>
+                        <br>
+                        hello@siria.com
+                    </p>
+
+                    <p>
+                        <strong>Availability</strong>
+                        <br>
+                        Working Worldwide
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form class="contact-form" id="contactForm">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Your email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="service">
+                        Service
+                    </label>
+
+                    <select id="service">
+
+                        <option value="">
+                            Select a service
+                        </option>
+
+                        <option>
+                            Brand Strategy
+                        </option>
+
+                        <option>
+                            Website Design
+                        </option>
+
+                        <option>
+                            Digital Growth
+                        </option>
+
+                        <option>
+                            Creative Design
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Tell Us About Your Project
+                    </label>
+
+                    <textarea
+                        id="message"
+                        rows="6"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Send Message →
+                </button>
+
+                <p id="formMessage"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-top">
 
         <div>
-            <h4>Company</h4>
 
-            <a href="#about">About Us</a>
+            <a href="#home" class="logo">
+                SIRIA<span>.</span>
+            </a>
+
+            <p>
+                Modern digital solutions for ambitious businesses.
+            </p>
+
+        </div>
+
+
+        <div class="footer-nav">
+
+            <a href="#home">Home</a>
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
             <a href="#contact">Contact</a>
-        </div>
 
-
-        <div>
-            <h4>Services</h4>
-
-            <a href="#services">Branding</a>
-            <a href="#services">Web Design</a>
-            <a href="#services">Marketing</a>
-            <a href="#services">Consulting</a>
-        </div>
-
-
-        <div>
-            <h4>Support</h4>
-
-            <a href="#">Help Center</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
         </div>
 
     </div>
 
-</div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Siria. All rights reserved.
+        </p>
+
+        <p>
+            Built for modern business.
+        </p>
+
+    </div>
+
+</footer>
 
 
-<div class="footer-bottom">
-
-    <p>
-        © 2026 SIRIA. All rights reserved.
-    </p>
-
-    <p>
-        Designed for modern businesses.
-    </p>
-
-</div>
-
-</footer><!-- SCROLL TO TOP BUTTON --><button id="scrollTop" class="scroll-top" aria-label="Scroll to top">
+<!-- SCROLL TO TOP -->
+<button
+    id="scrollTop"
+    class="scroll-top"
+    aria-label="Scroll to top"
+>
     ↑
-</button><!-- JAVASCRIPT --><script src="script.js"></script></body>
-</html>
+</button>
+
+
+<!-- JAVASCRIPT -->
+<script src="script.js"></script>
+
+</body></html>
